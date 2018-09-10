@@ -1,0 +1,31 @@
+{
+  "name": "electroneum/vendor-php",
+  "description": "Electroneum Vendor PHP Library",
+  "type": "library",
+  "keywords": [
+    "electroneum",
+    "etn",
+    "vendor",
+    "api",
+    "php"
+  ],
+  "homepage": "https://community.electroneum.com/t/about-the-instant-payment-api-category",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Electroneum Ltd",
+      "email": "support@electroneum.com"
+    }
+  ],
+  "require": {
+    "php": ">=5.4.0",
+    "ext-curl": "*",
+    "ext-ctype": "*",
+    "ext-json": "*"
+  },
+   "autoload": {
+     "psr-4": {
+       "Electroneum\\Vendor\\": "src"
+     }
+   }
+}
