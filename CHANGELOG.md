@@ -3,6 +3,8 @@
 All released changes will be documented in this file.
 
 ## [Unreleased]
+
+## [0.1.1] - 2018-10-01
 * Fixed payload order in `/example/poll-confirmation.php`
 * Updated `URL_SUPPLY` to use cUrl (preferred over `file_get_contents()`) and throw exception if neither are available
 * Remote API updates include:
