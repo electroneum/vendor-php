@@ -50,7 +50,7 @@ The following are required for using the Vendor API:
 - Electroneum user account with Vendor API enabled
 - PHP v5.4.0 or later with the extensions:
   - ext-ctype
-  - ext-curl
+  - ext-curl (or enable `allow_url_fopen`)
   - ext-json
 
 ## Download
