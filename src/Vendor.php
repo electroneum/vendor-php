@@ -149,8 +149,9 @@ class Vendor
         if (function_exists('curl_version')) {
             $ch = curl_init();
             curl_setopt($ch, CURLOPT_URL, Vendor::URL_SUPPLY);
-            curl_setopt($ch, CURLOPT_CONNECTTIMEOUT ,2);
-            curl_setopt($ch, CURLOPT_TIMEOUT, 2);
+            curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+            curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 5);
+            curl_setopt($ch, CURLOPT_TIMEOUT, 10);
             $json = curl_exec($ch);
             curl_close($ch);
         } elseif (ini_get('allow_url_fopen')) {
