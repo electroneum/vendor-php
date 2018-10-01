@@ -14,8 +14,8 @@ $vendor = new \Electroneum\Vendor\vendor('key_live_1234567890abcdefghijklm', 'se
 try {
     // Generate the payload.
     $payload = [
-        'vendor_address' => 'etn-it-0abc123def456',
-        'payment_id' => '7ce25b4dc0'
+        'payment_id' => '7ce25b4dc0',
+        'vendor_address' => 'etn-it-0abc123def456'
     ];
 
     // Check for confirmation.
