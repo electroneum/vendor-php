@@ -20,6 +20,12 @@ You can sign up for an Electroneum user account at
 apply for a vendor account at
 [my.electroneum.com/user/vendor](https://my.electroneum.com/user/vendor).
 
+Let us know when your integration is live, we’d love to share the news!
+You can share images & videos on
+[Twitter](https://twitter.com/electroneum),
+[Facebook](https://www.facebook.com/electroneum) or on the
+[community forum](https://community.electroneum.com/c/api-developers).
+
 ## Status
 
 This API is currently in BETA phase. During this phase, we accept no
@@ -50,7 +56,7 @@ The following are required for using the Vendor API:
 - Electroneum user account with Vendor API enabled
 - PHP v5.4.0 or later with the extensions:
   - ext-ctype
-  - ext-curl
+  - ext-curl (or enable `allow_url_fopen`)
   - ext-json
 
 ## Download
@@ -226,7 +232,9 @@ URL to the integration guide for the API and will always start
 `Electroneum/`. For example
 `Electroneum/1.0 (+https://electroneum.com/instant-payments)`.
 
-The payload will be sent in the request body.
+The payload will be sent in the request body and will include the event
+type and the event details. The `event` will be either a `payment` or
+a `refund`.
 
 The signature is sent in the `ETN-SIGNATURE` HTTP header with the
 webhook and is calculated using the SHA256 hash of the payload with

@@ -146,7 +146,22 @@ class Vendor
         }
 
         // Get the JSON conversion data.
-        if (!$json = file_get_contents(Vendor::URL_SUPPLY)) {
+        if (function_exists('curl_version')) {
+            $ch = curl_init();
+            curl_setopt($ch, CURLOPT_URL, Vendor::URL_SUPPLY);
+            curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+            curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 5);
+            curl_setopt($ch, CURLOPT_TIMEOUT, 10);
+            $json = curl_exec($ch);
+            curl_close($ch);
+        } elseif (ini_get('allow_url_fopen')) {
+            $json = file_get_contents(Vendor::URL_SUPPLY);
+        } else {
+            throw new VendorException("No extension available to fetch currency conversion JSON");
+        }
+
+        // Check if the JSON data has been received.
+        if (empty($json)) {
             throw new VendorException("Could not load currency conversion JSON");
         }
 
