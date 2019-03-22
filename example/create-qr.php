@@ -5,8 +5,8 @@
  */
 
 // Load the ETN vendor class.
-require_once("../src/Vendor.php");
-require_once("../src/Exception/VendorException.php");
+require_once '../src/Vendor.php';
+require_once '../src/Exception/VendorException.php';
 
 // Create the vendor object.
 $vendor = new \Electroneum\Vendor\Vendor('key_live_1234567890abcdefghijklm', 'sec_live_zxyxwvutsrqponmlkjihgfedcba0987654321zxyxwvutsrqponmlkj');
@@ -15,9 +15,9 @@ $vendor = new \Electroneum\Vendor\Vendor('key_live_1234567890abcdefghijklm', 'se
 try {
     $qrImgUrl = $vendor->getQr(9.95, 'GBP', '0abc123def456');
 
-    echo "<h1>QR Code For Payment</h1>";
-    echo "<p>Payment for " . $vendor->getEtn(). " ETN to outlet " . $vendor->getOutlet(). " with a payment-id of " . $vendor->getPaymentId(). ":<br />$qrImgUrl</p>";
-    echo "<p><img src=\"$qrImgUrl\" /></p>";
+    echo '<h1>QR Code For Payment</h1>';
+    echo '<p>Payment for ' . $vendor->getEtn() . ' ETN to outlet ' . $vendor->getOutlet() . ' with a payment-id of ' . $vendor->getPaymentId() . ':<br />' . $qrImgUrl . '</p>';
+    echo '<p><img src="' . $qrImgUrl . '" alt="" /></p>';
 
     // Alternatively, you can use our Vendor Payment Widget to show a clickable QR code for eCommerce websites
     // @see https://github.com/electroneum/vendor-payment-widget
