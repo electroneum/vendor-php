@@ -66,7 +66,7 @@ You can download the latest PHP API from
 
 ## Installation
 
-## Manual Installation
+### Manual Installation
 
 Unpack the API and include the Electroneum vendor class:
 
@@ -165,42 +165,52 @@ URL of the QR code image.
 
 The `$currency` must be one of the following three-digit codes:
 
-| Name                   | Code | JSON Key  |
-|------------------------|------|-----------|
-| Australia Dollar       | AUD  | price_aud |
-| Brazil Real            | BRL  | price_brl |
-| Bitcoin                | BTC  | price_btc |
-| Canada Dollar          | CAD  | price_cad |
-| DR Congo Franc         | CDF  | price_cdf |
-| Switzerland Franc      | CHF  | price_chf |
-| Chile Peso             | CLP  | price_clp |
-| China Yuan Renminibi   | CNY  | price_cny |
-| Czech Repucalic Koruna | CZK  | price_czk |
-| Denmark Krone          | DKK  | price_dkk |
-| Euro                   | EUR  | price_eur |
-| United Kingdom Pound   | GBP  | price_gbp |
-| Hong Kong Dollar       | HKD  | price_hkd |
-| Hungary Forint         | HUF  | price_huf |
-| Indonesia Rupiah       | IDR  | price_idr |
-| Israel Rupee           | ILS  | price_ils |
-| India Rupee            | INR  | price_inr |
-| Japan Yen              | JPY  | price_jpy |
-| Korea Won              | KRW  | price_krw |
-| Mexico Peso            | MXN  | price_mxn |
-| Malaysia Ringgit       | MYR  | price_myr |
-| Norway Krone           | NOK  | price_nok |
-| New Zealand Dollar     | NZD  | price_nzd |
-| Phillipines Piso       | PHP  | price_php |
-| Pakistan Rupee         | PKR  | price_pkr |
-| Poland Zloty           | PLN  | price_pln |
-| Russia Ruble           | RUB  | price_rub |
-| Sweden Krone           | SEK  | price_sek |
-| Singapore Dollar       | SGD  | price_sgd |
-| Thailand Baht          | THB  | price_thb |
-| Turkey Lire            | TRY  | price_try |
-| Taiwan New Dollar      | TWD  | price_twd |
-| United States Dollar   | USD  | price_usd |
-| South Africa Rand      | ZAR  | price_zar |
+| Name                       | Code | JSON Key  |
+|----------------------------|------|-----------|
+| Argentina Peso             | ARS  | price_ars |
+| Australia Dollar           | AUD  | price_aud |
+| Bangladesh Taka            | BDT  | price_bdt |
+| Brazil Real                | BRL  | price_brl |
+| Bitcoin                    | BTC  | price_btc |
+| Canada Dollar              | CAD  | price_cad |
+| DR Congo Franc             | CDF  | price_cdf |
+| Switzerland Franc          | CHF  | price_chf |
+| Chile Peso                 | CLP  | price_clp |
+| China Yuan Renminibi       | CNY  | price_cny |
+| Colombian Peso             | COP  | price_cop |
+| Czech Republic Koruna      | CZK  | price_czk |
+| Denmark Krone              | DKK  | price_dkk |
+| Egypt Pound                | EGP  | price_egp |
+| Euro                       | EUR  | price_eur |
+| United Kingdom Pound       | GBP  | price_gbp |
+| Ghana Cedi                 | GHS  | price_ghs |
+| Hong Kong Dollar           | HKD  | price_hkd |
+| Hungary Forint             | HUF  | price_huf |
+| Indonesia Rupiah           | IDR  | price_idr |
+| Israel Rupee               | ILS  | price_ils |
+| India Rupee                | INR  | price_inr |
+| Japan Yen                  | JPY  | price_jpy |
+| Korea Won                  | KRW  | price_krw |
+| Mexico Peso                | MXN  | price_mxn |
+| Malaysia Ringgit           | MYR  | price_myr |
+| Nigeria Naira              | NGN  | price_ngn |
+| Norway Krone               | NOK  | price_nok |
+| New Zealand Dollar         | NZD  | price_nzd |
+| Phillipines Piso           | PHP  | price_php |
+| Pakistan Rupee             | PKR  | price_pkr |
+| Poland Zloty               | PLN  | price_pln |
+| Romania Leu                | RON  | price_ron |
+| Russia Ruble               | RUB  | price_rub |
+| Sweden Krone               | SEK  | price_sek |
+| Singapore Dollar           | SGD  | price_sgd |
+| Thailand Baht              | THB  | price_thb |
+| Turkey Lire                | TRY  | price_try |
+| Taiwan New Dollar          | TWD  | price_twd |
+| Ukraine Hryvnia            | UAH  | price_uah |
+| United States Dollar       | USD  | price_usd |
+| Venezuela Bolívar Soberano | VES  | price_ves |
+| Vietnam đồng               | VND  | price_vnd |
+| South Africa Rand          | ZAR  | price_zar |
 
 The `paymentId` will be stored in the vendor object. You can retrieve
 this value using the `getPaymentId()` method if this is automatically
