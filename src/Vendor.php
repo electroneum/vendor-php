@@ -24,7 +24,7 @@ class Vendor
     /**
      * Url (sprintf) to load a QR code.
      */
-    const URL_QR = 'https://chart.googleapis.com/chart?cht=qr&chs=300x300&chld=L|0&chl=%s';
+    const URL_QR = 'https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=%s';
 
     /**
      * @var array

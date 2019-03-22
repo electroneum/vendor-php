@@ -46,6 +46,7 @@ All released changes will be documented in this section.
 ### 2019-03-22
 - Added more currencies: ARS, BDT, COP, EGP, GHS, NGN, RON, UAH, VES, VND
 - Removed VERSION.md and moved CHANGELOG.md into README.md
+- Replaced Google Chart with QR Server to generate QR images
 
 ### 2018-10-01
 - Fixed payload order in `/example/poll-confirmation.php`
