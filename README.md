@@ -32,12 +32,31 @@ This API is currently in BETA phase. During this phase, we accept no
 responsibility for any false notifications nor affirm the identity of
 any vendors.
 
-There is a maximum spend limit of €50.00 per transaction; this figure
+There is a maximum spend limit of €500.00 per transaction; this figure
 is converted to ETN at a regular interval based on market data. Please
 do not try to present a QR code to users above this limit as the
 transaction will fail.
 
 The `composer` version should used should be `beta` during this phase.
+
+## Changelog
+
+All released changes will be documented in this section.
+
+### 2019-03-22
+- Added more currencies: ARS, BDT, COP, EGP, GHS, NGN, RON, UAH, VES, VND
+- Removed VERSION.md and moved CHANGELOG.md into README.md
+
+### 2018-10-01
+- Fixed payload order in `/example/poll-confirmation.php`
+- Updated `URL_SUPPLY` to use cUrl (preferred over `file_get_contents()`) and throw exception if neither are available - reported and recommend fix by [Benjaminoo](https://community.electroneum.com/t/proposed-workaround-for-php-servers-that-have-disabled-allow-url-fopen/5517)
+- Remote API updates include:
+  - Poll confirmation signature is now case insensitive
+  - Webhook response now includes an `event` parameter
+  - Poll http response updated to `200` from `400` on `status: 0`
+
+### 2018-09-10
+- First beta release of the Electroneum Vendor PHP API
 
 ## Support
 
