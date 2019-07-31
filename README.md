@@ -43,6 +43,9 @@ The `composer` version should used should be `beta` during this phase.
 
 All released changes will be documented in this section.
 
+### 2019-07-31
+- Added currency KHR
+
 ### 2019-03-22
 - Added more currencies: ARS, BDT, COP, EGP, GHS, NGN, RON, UAH, VES, VND
 - Removed VERSION.md and moved CHANGELOG.md into README.md
@@ -91,7 +94,7 @@ You can download the latest PHP API from
 Unpack the API and include the Electroneum vendor class:
 
 ```php
-require_once('src/vendor.php');
+require_once 'src/vendor.php';
 ```
 
 ### Composer Installation
@@ -210,6 +213,7 @@ The `$currency` must be one of the following three-digit codes:
 | Israel Rupee               | ILS  | price_ils |
 | India Rupee                | INR  | price_inr |
 | Japan Yen                  | JPY  | price_jpy |
+| Cambodia Riel              | KHR  | price_khr |
 | Korea Won                  | KRW  | price_krw |
 | Mexico Peso                | MXN  | price_mxn |
 | Malaysia Ringgit           | MYR  | price_myr |
