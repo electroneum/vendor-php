@@ -5,8 +5,8 @@
  */
 
 // Load the ETN vendor class.
-require_once("../src/Vendor.php");
-require_once("../src/Exception/VendorException.php");
+require_once '../src/Vendor.php';
+require_once '../src/Exception/VendorException.php';
 
 // Create the vendor object.
 $vendor = new \Electroneum\Vendor\vendor('key_live_1234567890abcdefghijklm', 'sec_live_zxyxwvutsrqponmlkjihgfedcba0987654321zxyxwvutsrqponmlkj');
@@ -22,13 +22,13 @@ try {
     $result = $vendor->checkPaymentPoll(json_encode($payload));
 
     // Output the result.
-    echo "<h1>Poll for Confirmation of Payment</h1>";
-    if ($result['status'] == 1) {
-        echo "<p>Payment sent for " . $result['amount'] . " ETN</p>";
+    echo '<h1>Poll for Confirmation of Payment</h1>';
+    if ($result['status'] === 1) {
+        echo '<p>Payment sent for ' . $result['amount'] . ' ETN</p>';
     } elseif (!empty($result['message'])) {
-        echo "<p>" . $result['message'] . "</p>";
+        echo '<p>' . $result['message'] . '</p>';
     } else {
-        echo "<p>There was an unknown error.</p>";
+        echo '<p>There was an unknown error.</p>';
     }
 } catch (\Electroneum\Vendor\Exception\VendorException $error) {
     echo $error;
