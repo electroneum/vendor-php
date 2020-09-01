@@ -43,6 +43,9 @@ The `composer` version should used should be `beta` during this phase.
 
 All released changes will be documented in this section.
 
+### 2020-09-01
+- Support for `bcmath` precision
+
 ### 2019-07-31
 - Added currency KHR
 
@@ -78,6 +81,7 @@ be found at [community.electroneum.com](https://community.electroneum.com/t/usin
 The following are required for using the Vendor API:
 - Electroneum user account with Vendor API enabled
 - PHP v5.4.0 or later with the extensions:
+  - ext-bcmath (optional, recommended)
   - ext-ctype
   - ext-curl (or enable `allow_url_fopen`)
   - ext-json

@@ -7,11 +7,6 @@ use Electroneum\Vendor\Exception\VendorException;
 class Vendor
 {
     /**
-     * Version number of this vendor class.
-     */
-    const API_VERSION = '0.1.0';
-
-    /**
      * Url to poll for payment confirmation.
      */
     const URL_POLL = 'https://poll.electroneum.com/vendor/check-payment';
@@ -225,7 +220,12 @@ class Vendor
             throw new VendorException('Currency conversion rate not valid');
         }
 
-        $this->etn = number_format((float)$value / $rate, 2, '.', '');
+        if (extension_loaded('bcmath')) {
+            /** @noinspection PhpComposerExtensionStubsInspection */
+            $this->etn = bcdiv($value, $rate, 2);
+        } else {
+            $this->etn = number_format((float)$value / $rate, 2, '.', '');
+        }
 
         return $this->etn;
     }
@@ -262,9 +262,7 @@ class Vendor
         $this->outlet = $outlet;
 
         // Return the QR code string.
-        $qrCode = sprintf('etn-it-%s/%s/%.2f', $this->outlet, $this->paymentId, $this->etn);
-
-        return $qrCode;
+        return sprintf('etn-it-%s/%s/%.2f', $this->outlet, $this->paymentId, $this->etn);
     }
 
     /**
